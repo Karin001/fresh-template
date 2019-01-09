@@ -1,0 +1,148 @@
+html,body{
+    margin:0;
+    padding:0;
+    height: 100%;
+    font-size: 12px;
+    @media screen and (min-width:450px){
+        font-size: 14px;
+    }
+    @media screen and (min-width:510px){
+        font-size: 16px;
+    }
+}
+.search-bar{
+    height: 53px;
+    background-color: #0dc19c;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    &::before{
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top:15px;
+        left:16%;
+        display: block;
+        background: url(../assets/search.png) no-repeat 100% 100%;
+        background-position: center;
+
+    }
+    &::after{
+        z-index:20;
+        content:"";
+        display: block;
+        position: absolute;
+        width: 70%;
+        height: 6px;
+        border:1px solid white;
+        border-top:transparent;
+        top:33px;
+        left: 15%;
+    }
+    input{
+        background: none;
+        color:white;
+        outline:none;
+        padding-left: 30px;
+        box-sizing: border-box;
+        width: 70%;
+        border:none;
+        &::placeholder{
+            color:#cdf2ea;
+        }
+        &::active{
+            border:none;
+        }
+        
+    }
+}
+.tab-menu{
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    .menu{
+        width: calc(70 / 450 * 100%);
+        text-align: center;
+        line-height:50px; 
+        font-size: 1rem;
+        border-bottom:2px solid transparent;
+        color:#6b6b6b;
+       
+    }
+    .menu-active{
+        border-bottom:2px solid #7ec420;
+   
+    }
+}
+.banner{
+    height: 115px;
+   background: url(../assets/fenlei-banner.png) 100% 100%;
+   background-position: center;
+}
+.list{
+    .type{
+        .title{
+            margin:0;
+            text-align: center;
+            line-height: 60px;
+            height: 60px;
+            background-color:#f1f1f1;
+            font-size: 1.1rem;
+           
+            font-weight: normal;
+            span{
+                position: relative;
+                color:#666666;
+            }
+            span:before{
+                content:'';
+                position: absolute;
+                display: block;
+                width: 85px;
+                height: 10px;
+                border-top:1px solid #666666;
+                top:50%;
+                right: 105%;
+            }
+            span:after{
+                content:'';
+                position: absolute;
+                display: block;
+                width: 85px;
+                height: 10px;
+                border-top:1px solid #666666;
+                top:50%;
+                left: 105%;
+            }
+        }
+        .detail-con{
+           display: flex;
+           flex-wrap: wrap;
+            .detail{
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                .img-box{
+                    width: 70%;
+                    height: calc(100vw * 0.25 * 0.7);
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    img{
+                        width: 100%;
+                      
+                    }
+                }
+                .name{
+                    padding-top:10px;
+                    text-align: center;
+                    color:#6b6b6b;
+                }
+            }
+        }
+    }
+}

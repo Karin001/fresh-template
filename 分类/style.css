@@ -1,0 +1,204 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 450px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 510px) {
+  html, body {
+    font-size: 16px;
+  }
+}
+
+.search-bar {
+  height: 53px;
+  background-color: #0dc19c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-bar::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  left: 16%;
+  display: block;
+  background: url(../assets/search.png) no-repeat 100% 100%;
+  background-position: center;
+}
+
+.search-bar::after {
+  z-index: 20;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 70%;
+  height: 6px;
+  border: 1px solid white;
+  border-top: transparent;
+  top: 33px;
+  left: 15%;
+}
+
+.search-bar input {
+  background: none;
+  color: white;
+  outline: none;
+  padding-left: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 70%;
+  border: none;
+}
+
+.search-bar input::-webkit-input-placeholder {
+  color: #cdf2ea;
+}
+
+.search-bar input:-ms-input-placeholder {
+  color: #cdf2ea;
+}
+
+.search-bar input::-ms-input-placeholder {
+  color: #cdf2ea;
+}
+
+.search-bar input::placeholder {
+  color: #cdf2ea;
+}
+
+.search-bar input::active {
+  border: none;
+}
+
+.tab-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.tab-menu .menu {
+  width: calc(70 / 450 * 100%);
+  text-align: center;
+  line-height: 50px;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent;
+  color: #6b6b6b;
+}
+
+.tab-menu .menu-active {
+  border-bottom: 2px solid #7ec420;
+}
+
+.banner {
+  height: 115px;
+  background: url(../assets/fenlei-banner.png) 100% 100%;
+  background-position: center;
+}
+
+.list .type .title {
+  margin: 0;
+  text-align: center;
+  line-height: 60px;
+  height: 60px;
+  background-color: #f1f1f1;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.list .type .title span {
+  position: relative;
+  color: #666666;
+}
+
+.list .type .title span:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 85px;
+  height: 10px;
+  border-top: 1px solid #666666;
+  top: 50%;
+  right: 105%;
+}
+
+.list .type .title span:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 85px;
+  height: 10px;
+  border-top: 1px solid #666666;
+  top: 50%;
+  left: 105%;
+}
+
+.list .type .detail-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.list .type .detail-con .detail {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list .type .detail-con .detail .img-box {
+  width: 70%;
+  height: calc(100vw * 0.25 * 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.list .type .detail-con .detail .img-box img {
+  width: 100%;
+}
+
+.list .type .detail-con .detail .name {
+  padding-top: 10px;
+  text-align: center;
+  color: #6b6b6b;
+}
+/*# sourceMappingURL=style.css.map */

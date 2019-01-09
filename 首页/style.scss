@@ -1,0 +1,262 @@
+html,body{
+    padding:0;
+    margin:0;
+    height: 100%;
+    font-size:10px;
+    @media (min-width:375px){
+        font-size:12px;
+    }
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.scroll-zone{
+    flex: 1;
+    overflow-y: auto;
+  
+}
+header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height:53px;
+    background:#0dc19c;
+    padding:0 20px;
+    position: relative;
+    color:white;
+    font-size: 1.2rem;
+    .search{
+        position: absolute;
+        right: 20px;
+    }
+}
+.carousel{
+    position: relative;
+    height: calc(450 /1080 * 100vw);
+    overflow: hidden;
+    img{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    img:not(:first-child){
+        left:-1000px;
+    }
+    .btn-group{
+        position: absolute;
+        bottom: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        .btn{
+            width: 3.3vw;
+            margin:.1vw;
+            height: .7vw;
+            background-color: #0dc19c;
+            display: inline-block;
+            &:not(:first-child){
+                background-color: #fff;
+            }
+        }
+    }
+}
+.type-list{
+   
+    padding:0 10px;
+    height: 104px;
+    display: flex;
+    .type{
+        padding: 0 10px;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .iconbox{
+            border-radius: 50%;
+            width: 47px;
+            height: 47px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid  #0dc19c;
+            
+        }
+        .type-name{
+            color:#9a9a9a;
+            font-size: 3.5vw;
+            @media(min-width:500px){
+                font-size: 17.5px;
+            }
+            margin-top:5px;
+        }
+    }
+}
+.hot{
+    .banner{
+        img{
+            width: 100%;
+        }   
+    }
+    .scroll-list-container{
+        min-height: 249px;
+        width: 100%;
+        overflow-x: scroll;
+        .scroll{
+            min-height: 249px;
+            white-space: nowrap;
+
+            .item{
+                
+                min-height: 249px;
+                display: inline-block;
+                vertical-align:top;
+                width: 44vw;
+                .img-box{
+                    margin: 0 10px;
+                    min-height: 152px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: 2px solid #e8e8e8;
+                    
+                }
+                .intro{
+                    padding-left:15px;
+                    white-space: normal;
+                    word-break: break-all;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    color:#434343;
+                }
+                .info{
+                    padding-left: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    .price{
+                        font-size: 1.3rem;
+                        color: #f24949;
+                        vertical-align: bottom;
+                       
+                    }
+                    .buyer{
+                        font-size: 1rem;
+                        color:#898989;
+                        margin-right: 5px;
+                    }
+                }
+            }
+         
+        }
+    }
+}
+.recommend{
+    .title{
+        padding-left: 15px;
+        min-height: 58px;
+        background: #0dc19c;
+        color:white;
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        i{
+            transform: scale(.5) rotate(-10deg);
+            padding:0 2px;
+        }
+    }
+    .items{
+        padding:7px 15px;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        background-color: #f8f8f8;
+        .item{
+           
+            border: 3px solid #f8f8f8;
+            box-sizing: border-box;    
+            min-height: 249px;
+            width: 50%;
+            background-color: #f8f8f8;
+            .img-box{
+                min-height: 152px;
+                display: flex;
+                background-color: #fff;
+                justify-content: center;
+                align-items: center;
+               
+
+            }
+            .intro{
+             
+                white-space: normal;
+                word-break: break-all;
+                font-size: 1rem;
+                background-color: #fff;
+                font-weight: bold;
+                p{
+                    margin: 0;
+                    border-top: 1px solid #e8e8e8;
+                    padding: 10px;
+                }
+             
+            }
+            .info{
+            
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                background-color: #fff;
+                .price{
+                    font-size: 1.3rem;
+                    margin-left: 10px;
+                    font-weight: bold;
+                    color: #f24949;
+                    vertical-align: bottom;
+                   
+                }
+                .buyer{
+                    font-size: 1rem;
+                    color:#898989;
+                    margin-right: 10px;
+                    vertical-align: bottom;
+                    position: relative;
+                    bottom: 2px;
+
+                }
+                padding-bottom: 10px;
+            }
+        }
+        .item:nth-child(odd){
+            border-left-width: 0;
+        }
+        .item::nth-child(even){
+            border-right-width: 0;
+        }
+    }
+}
+.tab-menu{
+    height: 65px;
+    box-shadow: 0 -1px 1px 1px rgba($color: #000000, $alpha: .1);
+    display: flex;
+    .menu-box{
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .img-box{
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        span{
+
+        }
+    }
+}

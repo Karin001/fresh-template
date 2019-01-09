@@ -1,0 +1,219 @@
+htm, body {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  height: 100%;
+}
+
+header {
+  height: 50px;
+  background-color: #0dc19c;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.form {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 40px;
+}
+
+.form .input-box {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form .input-box .icon-box {
+  width: 17px;
+  height: 17px;
+  margin-right: 9px;
+  margin-top: 3px;
+}
+
+.form .input-box .icon-box img {
+  width: 100%;
+}
+
+.form .input-box input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  outline: none;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 7px;
+  padding-left: 7px;
+}
+
+.form .input-box input:focus {
+  border-color: #0dc19c;
+}
+
+.form .input-box input::-webkit-input-placeholder {
+  color: #d5d5d5;
+}
+
+.form .input-box input:-ms-input-placeholder {
+  color: #d5d5d5;
+}
+
+.form .input-box input::-ms-input-placeholder {
+  color: #d5d5d5;
+}
+
+.form .input-box input::placeholder {
+  color: #d5d5d5;
+}
+
+.form .input-box .checkbox-box {
+  position: absolute;
+  left: 25px;
+  top: 110%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form .input-box .checkbox-box input[type=checkbox] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.form .input-box .checkbox-box label {
+  color: #d5d5d5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form .input-box .checkbox-box label i {
+  position: relative;
+  margin-right: 5px;
+  content: "";
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 13px;
+  height: 13px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.form .input-box .checkbox-box label i:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.form .input-box .checkbox-box input:checked + label {
+  color: black;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.form .input-box .checkbox-box input:checked + label i {
+  border-color: #0dc19c;
+}
+
+.form .input-box .checkbox-box input:checked + label i:before {
+  background-color: #0dc19c;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.form button {
+  margin: 50px 0 70px 0;
+  width: 100%;
+  outline: none;
+  background-color: #0dc19c;
+  border-radius: 20px;
+  text-align: center;
+  height: 46px;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.oth .title {
+  margin: 0;
+  text-align: center;
+  line-height: 60px;
+  height: 60px;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.oth .title span {
+  position: relative;
+  color: #666666;
+}
+
+.oth .title span:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 10px;
+  border-top: 1px solid #666666;
+  top: 50%;
+  right: 105%;
+}
+
+.oth .title span:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 10px;
+  border-top: 1px solid #666666;
+  top: 50%;
+  left: 105%;
+}
+
+.oth .oth-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.oth .oth-list .icon-box {
+  width: 40px;
+  height: 40px;
+  margin: 15px 20px;
+}
+
+.oth .oth-list .icon-box img {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
